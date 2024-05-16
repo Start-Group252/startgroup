@@ -42,17 +42,25 @@
             padding: 0;
             margin: 0 auto; /* Centrar el elemento nav */
             max-width: 800px; /* Ancho máximo */
+            display: none; /* Ocultar el menú en dispositivos móviles por defecto */
         }
 
         nav li {
-            display: inline;
-            margin-right: 20px;
+            display: block; /* Mostrar elementos de lista como bloques */
+            margin-bottom: 10px; /* Espacio entre elementos */
         }
 
         nav a {
             text-decoration: none;
             color: #1a237e; /* Azul oscuro */
-			font-weight: bold;
+            font-weight: bold;
+        }
+
+        /* Mostrar el menú desplegable solo en dispositivos móviles */
+        @media screen and (max-width: 600px) {
+            nav ul {
+                display: block; /* Mostrar el menú como una lista */
+            }
         }
 
         /* Secciones de servicios */
@@ -67,16 +75,17 @@
             text-align: center;
             padding: 20px;
         }
-		 /* Estilos para centrar la imagen */
+
+        /* Estilos para centrar la imagen */
         .centered-image {
             text-align: center;
         }
+
         .centered-image img {
             display: inline-block;
             max-width: 100%;
             height: auto;
         }
-		
     </style>
 </head>
 <body>
